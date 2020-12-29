@@ -81,8 +81,11 @@ export class Hypertorus
             uView4D: { type: 'm4', value: this.camera4D.view }
         };
 
-        const vert = this.loadFile( "../assets/shaders/projection.vert" );
-        const frag = this.loadFile( "../assets/shaders/projection.frag" );
+        // const vert = this.loadFile( "../assets/shaders/projection.vert" );
+        // const frag = this.loadFile( "../assets/shaders/projection.frag" );
+
+        const vert = document.querySelector( '#vs' ).textContent;
+        const frag = document.querySelector( '#fs' ).textContent;
 
         const material = new THREE.ShaderMaterial({
             vertexShader: vert,
